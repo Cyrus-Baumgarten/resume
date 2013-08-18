@@ -5,10 +5,14 @@ gem 'rails', '4.0.0'
 gem 'bootstrap-sass'
 gem 'haml'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
+
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
